@@ -1,0 +1,40 @@
+header{
+    margin: 0px auto;
+    width: 80%;
+    background-color: #1A7391;
+}
+#head{
+    background: rgb(190, 53, 43);
+    width: 100%;
+  }
+  
+#head ul{
+    line-height: 50px;
+    list-style: none;
+}
+  
+#head ul li{
+    height: 50px;
+    display: inline-block;
+    margin: 5px;
+}
+
+#bien{
+    color: white;
+ 
+}
+#head button{
+    display: block;
+    background: rgb(190, 53, 43);
+    height: 40px;
+    color: white;
+    width: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+#head button:hover{
+  background: #910404;
+}
