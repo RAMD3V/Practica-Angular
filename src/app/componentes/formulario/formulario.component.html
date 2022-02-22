@@ -3,32 +3,34 @@
 <div  >
     <h1>Datos</h1>
     <div id="formul">
-    <form [formGroup]="formulario" (ngSubmit)="guardarDatos()">
         <label for="">Ingresa tu nombre</label>
-        <input type="text" id="nombre" formControlName="nombre">
+        <input type="text" id="nombre" [(ngModel)]="nombre">
         <label for="">Ingresa tu Apellido</label>
-        <input type="text" formControlName="apellido">
+        <input type="text" [(ngModel)]="apellido">
         <label for="">Ingresa tu Email</label>
-        <input type="text" formControlName="email">
+        <input type="text" [(ngModel)]="correo">
         <label for="">Ingresa tu Número</label>
-        <input type="text" formControlName="telefono">
+        <input type="text" [(ngModel)]="numero">
         <label for="">Ingresa tu mensaje</label>
-        <input type="textarea" formControlName="mensaje">
-        <input type="submit" value="Guardar Datos">
-    </form>
+        <input type="textarea" [(ngModel)]="mensaje">
+        <input type="submit" value="Guardar Datos" >
+        
     </div>
-    <div *ngIf="estado">
-        <h2>Datos guardados</h2>ç
-        <p class="txtm">Nombre:</p>
-        <p>{{nombre}}</p>
-        <p class="txtm">Apellido:</p>
-        <p>{{apellido}}</p>
-        <p class="txtm">Correo Electronico:</p>
-        <p>{{correo}}</p>
-        <p class="txtm">Telefono:</p>
-        <p>{{telefono}}</p>
-        <p class="txtm">Mensaje:</p>
-        <p>{{mensaje}}</p><br>
+    <div>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Mensaje</th>
+            </tr>
+            <tbody>
+                    <tr>
+                        <td>{{nombre}}</td>
+                        <td>{{correo}}</td>
+                        <td>{{mensaje}}</td>
+                    </tr>
+            </tbody>
+        </table><br>
     </div>
 </div>
 </div>

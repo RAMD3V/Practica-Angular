@@ -60,14 +60,7 @@ input[type=text], select {
     width: 500px;
 
 }
-p{
-  text-align: center;
-}
-.txtm{
-  color: #5f000d;
-  font-size: 20px;
-  font-weight: bold
-}table {
+table {
   margin: 0px auto;
   table-layout: fixed;
   width: 600px;
@@ -82,5 +75,4 @@ table th{
 
 table td{
   text-align: center;
-  width: 100%;
 }

@@ -1,6 +1,6 @@
 import { formatNumber } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder,FormControl,FormGroup,Validators } from '@angular/forms';
+import { Component, NgModule, OnInit } from '@angular/core';
+
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
@@ -8,33 +8,20 @@ import { FormBuilder,FormControl,FormGroup,Validators } from '@angular/forms';
 })
 export class FormularioComponent implements OnInit {
   
-formulario=this.formBuilder.group({
-  nombre:'',
-  apellido:'',
-  email:'',
-  telefono:'',
-  mensaje:''
-});
-estado=false;
-nombre="";
-apellido="";
-correo="";
-telefono="";
-mensaje="";
+  nombre:string = "";
+  apellido:string = "";
+  correo:string= "";
+  numero:number= 0;
+  mensaje:string = "";
+  estado:boolean=false;
+  constructor() { 
+    
+  }
 
-
-  constructor(private formBuilder: FormBuilder,) { }
+  mostrar(){
+    this.estado=true;
+  }
 
   ngOnInit(): void {
   }
-guardarDatos(){
-  this.estado=true;
-  this.nombre = this.formulario.get('nombre')?.value
-  this.apellido = this.formulario.get('apellido')?.value
-  this.correo = this.formulario.get('email')?.value
-  this.telefono = this.formulario.get('telefono')?.value
-  this.mensaje = this.formulario.get('mensaje')?.value
-  this.formulario.reset();
-
-}
 }

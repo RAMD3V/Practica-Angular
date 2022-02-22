@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div id="cuerpof">
+<div  >
+    <h1>Contacto</h1>
+    <div id="formul">
+    <form  [formGroup]="formulario" (ngSubmit)="guardarTip()">
+        <label for="">Ingresa tu Nombre</label>
+        <input type="text" id="nombre" formControlName="nombre">
+        <label for="">Ingresa tu Correo Electronico</label>
+        <input type="text" formControlName="correo">
+        <label for="">Ingresa tu juego favorito</label>
+        <input type="text" formControlName="videojuego">
+        <label for="">Ingresa tu tip para mejorar</label>
+        <input type="textarea" formControlName="tip">
+        <input type="submit" value="Guardar tus tips">
+    </form>
+    </div>
+        <table *ngIf="estado">
+            <tr>
+                <th>Nombre</th>
+                <th>Tip</th>
+            </tr>
+            <tbody *ngFor="let user of tips">
+                    <tr>
+                        <td>{{user.nombre}}</td>
+                        <td>{{user.tip}}</td>
+                    </tr>
+            </tbody>
+        </table><br>
+    </div>
+</div>

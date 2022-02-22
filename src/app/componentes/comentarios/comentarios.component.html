@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div id="cuerpof">
+<div  >
+    <h1>Déjanos tus comentarios</h1>
+    <div id="formul">
+    <form  [formGroup]="formulario" (ngSubmit)="guardarTip()">
+        <label for="">Ingresa tu Nick</label>
+        <input type="text" id="nombre" formControlName="nick">
+        <label for="">Ingresa tu Correo Electronico</label>
+        <input type="text" formControlName="correo">
+        <label for="">Fecha</label>
+        <input type="date" formControlName="fecha">
+        <label for="">Ingresa tu tip para mejorar</label>
+        <input type="textarea" formControlName="comentario">
+        <input type="submit" value="Guardar tu Comentario">
+    </form>
+    </div>
+    <h2>Comentarios</h2>
+        <table *ngIf="estado">
+            <tr>
+                <th>Nick</th>
+                <th>Fecha</th>
+                <th>Comentario</th>
+            </tr>
+            <tbody *ngFor="let coment of com">
+                <tr>
+                    <td>{{coment.nick}}</td>
+                    <td>{{coment.fecha}}</td>
+                    <td>{{coment.comentario}}</td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+</div>

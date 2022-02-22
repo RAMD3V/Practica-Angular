@@ -12,6 +12,8 @@ import { GustosComponent } from './componentes/gustos/gustos.component';
 import { VideoComponent } from './componentes/video/video.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactoComponent } from './componentes/contacto/contacto.component';
+import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     GustosComponent,
     VideoComponent,
-    FormularioComponent
+    FormularioComponent,
+    ContactoComponent,
+    ComentariosComponent
   ],
   imports: [
     BrowserModule,
