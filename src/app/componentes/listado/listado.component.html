@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div id="cuerpof">
+    <h1>Primer comentario</h1>
+        <p>Nick:{{primero.nick}}</p>
+        <p>Comentario: {{primero.nick}}</p>
+        <h1>Último Comentarios</h1>
+        <p>Nick:{{ultimo.nick}}</p>
+        <p>Comentario: {{ultimo.comentario}}</p>
+    <table class="table">
+        <thead>
+            <th>Nick</th>
+            <th>Fecha</th>
+            <th>comentario</th>
+        </thead>
+        <tbody *ngFor="let item of servlistaComent">
+            <tr>
+                <td>{{item.nick}}</td>
+                <td>{{item.fecha}}</td>
+                <td>{{item.comentario}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,36 @@
+#cuerpof{
+    margin: 0px auto;
+    width: 80%;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0px;
+
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    color: #5f000d;
+}
+table {
+    margin: 0px auto;
+    table-layout: fixed;
+    width: 600px;
+    border-collapse: collapse;
+    border: 3px solid rgb(170, 4, 4);
+  }
+  table th{
+    text-align: center;
+    background-color: #c01137;
+    color: white;
+  }
+  
+  table td{
+    text-align: center;
+    width: 100%;
+  }
+  h2{
+      text-align: center;
+      color: #5f000d;
+  }
+  

@@ -14,7 +14,8 @@ import { FormularioComponent } from './componentes/formulario/formulario.compone
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
-
+import { ListadoComponent } from './componentes/listado/listado.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,13 +29,15 @@ import { ComentariosComponent } from './componentes/comentarios/comentarios.comp
     VideoComponent,
     FormularioComponent,
     ContactoComponent,
-    ComentariosComponent
+    ComentariosComponent,
+    ListadoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

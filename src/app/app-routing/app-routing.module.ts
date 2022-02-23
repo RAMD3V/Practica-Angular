@@ -7,6 +7,7 @@ import { VideoComponent } from '../componentes/video/video.component';
 import { FormularioComponent } from '../componentes/formulario/formulario.component';
 import { ContactoComponent } from '../componentes/contacto/contacto.component';
 import { ComentariosComponent } from '../componentes/comentarios/comentarios.component';
+import { ListadoComponent } from '../componentes/listado/listado.component';
 
 
 const routes : Routes = [
@@ -33,6 +34,10 @@ const routes : Routes = [
   {
     path:'comentarios',
     component:ComentariosComponent
+  },
+  {
+    path:'listadocomentarios',
+    component:ListadoComponent
   }
   
 

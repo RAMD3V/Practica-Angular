@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ModeloComentarios } from 'src/app/interface/modelo';
+import { ServiceService } from 'src/app/services/service.service';
 
 @Component({
   selector: 'app-comentarios',
@@ -19,7 +20,8 @@ tiempo= Date.now();
 
 estado:boolean=false;
   com:ModeloComentarios[]=[];
-  constructor(private formularioCom:FormBuilder) { }
+
+  constructor(private formularioCom:FormBuilder, private serviciolistacoment:ServiceService) { }
 
   guardarTip(){
     const nuevoCom : ModeloComentarios={
@@ -28,7 +30,11 @@ estado:boolean=false;
       fecha:this.formulario.get("fecha")?.value,
       comentario:this.formulario.get("comentario")?.value
     }
+    this.serviciolistacoment.addComent(nuevoCom);
+    
+   
    this.com.push(nuevoCom);
+   console.log(nuevoCom);
    this.estado=true;
    this.formulario.reset();
   }
